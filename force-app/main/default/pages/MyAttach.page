@@ -1,0 +1,3 @@
+<apex:page standardController="Account" action="{!saveAttach}" extensions="Test_PdfEmailController">
+    <apex:outputLabel value="PDF Saved Successfully"/>
+</apex:page>

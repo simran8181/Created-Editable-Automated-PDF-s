@@ -1,0 +1,37 @@
+<apex:page Standardcontroller="Document_Action__c" recordSetVar="doc" docType="html-5.0" extensions="SaveAsPdfExtension">
+    <apex:form >
+    <apex:pageBlock title="Document Actions List" id="document_list">
+    <apex:pageBlockButtons >
+      <!-- <apex:commandButton value="Submit Request" action="{!saveAndSuccess}" /> --> 
+	</apex:pageBlockButtons>        
+    	<!-- Opportunity List -->
+		<apex:pageBlockTable value="{!doc }" var="op">
+    	<apex:column headerValue="Name">
+            <apex:inputText id="Name" value="{!op.Name}" required="true"/>
+		</apex:column>
+        
+        <apex:column headerValue="Output format">
+            <apex:inputField value="{!op.Output_Format__c}"/>
+		</apex:column>
+            
+            <apex:column headerValue="Email Action">
+            <apex:inputField value="{!op.Email_Action__c}"/>
+		</apex:column>
+            
+        <apex:column headerValue="Email">
+            <apex:inputtext value="{!op.Email__c}"/>
+		</apex:column>
+            
+    	<apex:column headerValue="Visiblity">
+            <apex:inputField id="Visiblity" value="{!op.Visiblity__c}"/>
+		</apex:column>
+            
+    	<apex:column headerValue="Template document id">
+            <apex:inputtext id="Templatedocumentid" value="{!op.Template_Document_Id__c}"/>
+		</apex:column>
+	
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+    
+</apex:page>

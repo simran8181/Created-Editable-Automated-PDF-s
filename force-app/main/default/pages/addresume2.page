@@ -1,0 +1,14 @@
+<apex:page standardController="pdfproject__c" extensions="addResume2" docType="html-5.0">
+ 
+
+<apex:form >
+<apex:commandButton action="{!savetest}" value="Save" id="theButton" />
+Name <apex:inputfield label="Name" value="{!testobj2.Name}"/>
+</apex:form>
+
+
+<apex:form >
+Attachment <apex:inputfile value="{!myfile.body}" filename="{!myfile.Name}" /> 
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page standardcontroller="Contact" showHeader="false">
+
+<apex:outputField value="{!Contact.name}"/>
+    
+        <apex:image id="theImage" value="{!'/servlet/servlet.FileDownload?file=' & Contact.Id}" width="100" height="100"/>
+</apex:page>

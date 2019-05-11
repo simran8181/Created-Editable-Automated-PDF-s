@@ -1,0 +1,26 @@
+<apex:page standardController="pdfproject__c" extensions="addImageTopdf" docType="html-5.0">
+	<apex:form >
+    
+    	<apex:pageBlock mode="MainDetail" title="Image Section">
+    
+    		<apex:pageBlockSection >
+    
+        		<apex:pageBlockSectionItem >
+            		<apex:image value="/servlet/servlet.FileDownload?file={!ImageId}" rendered="{!NOT(ISBLANK(ImageId))}" width="200" height="200" />
+        		</apex:pageBlockSectionItem>
+    			
+                <apex:pageBlockSectionItem >
+                		<apex:outputLabel value="UploadImage"></apex:outputLabel>
+                    	<apex:outputPanel >
+                    		<apex:inputFile id="uploadfile" value="{!att.body}" fileName="{!att.name}"></apex:inputFile>
+                            <apex:commandButton value="UploadImage" action="{!UploadImage}"/>
+                    	</apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                
+    		</apex:pageBlockSection>
+        
+        </apex:pageBlock>
+	
+        </apex:form>
+
+</apex:page>

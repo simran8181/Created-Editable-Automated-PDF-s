@@ -1,0 +1,16 @@
+<apex:page standardController="Opportunity" docType="html-5.0" extensions="opportunityController" >
+   
+<table border="1" cellPadding="4" onclick="saveAndSuccess()">       
+          <TR> 
+              <TH> Amount </TH>
+              <TH>Probability</TH>
+              <TH>Expexted Revenue </TH> 
+    	</TR>
+          <TR>
+              <TD>{!Opportunity.Amount} </TD>
+              <TD>{!Opportunity.Probability}</TD>
+              <TD>{!Opportunity.ExpectedRevenue}</TD>                                                                                
+          </TR>
+    
+          </table>
+</apex:page>

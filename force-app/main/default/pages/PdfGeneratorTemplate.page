@@ -1,0 +1,135 @@
+<apex:page standardController="pdfproject__c" renderAs="pdf" docType="html-5.0">
+<h1>Congratulations!!</h1>
+<p>You created a PDF for {!pdfproject__c.Name__c}</p>
+<h1>Welcome to Universal Samples!</h1>
+
+<p>Thank you, <b><apex:outputText value=" {!pdfproject__c.Name__c}"/></b>
+    ,for becoming a new account with Universal Samples.</p>
+
+<p>Your account details are:</p>
+
+<table border="1" cellPadding="4" >
+    <tr>
+        <th colspan ="2">Student Information</th>
+    </tr>
+    
+<tr>
+    <th bgcolor="red">Student Name</th>
+    <td><apex:outputText value="{!pdfproject__c.Name__c}"/></td>
+</tr>
+    
+<tr>
+    <th>Email</th>
+    <td><apex:outputText value="{!pdfproject__c.Email__c}"/></td>
+</tr>
+    
+<tr>
+    <th>Student Since</th>
+    <td><apex:outputText value="{0,date,long}">
+        <apex:param value="{!pdfproject__c.CreatedDate}"/>
+        </apex:outputText></td>
+</tr>
+    
+<tr>
+    <th>Phone</th>
+    <td><apex:outputText value="{!pdfproject__c.Phone__c}"/></td>
+</tr>
+
+</table>
+<br/>
+<br/>
+    
+<table border="1" cellPadding="4" >
+<tr>
+   <th colspan ="2">Acedemic Information</th>
+</tr>    
+
+<tr>
+    <th>SSC School Name</th>
+    <td><apex:outputText value="{!pdfproject__c.SSC_School_Name__c}"/></td>
+</tr>
+    
+<tr>
+    <th>SSC Passing Year</th>
+    <td><apex:outputText value="{!pdfproject__c.SSC_Passing_Year__c}"/></td>
+</tr>
+    
+<tr>
+    <th>SSC Percentage</th>
+    <td><apex:outputText value="{!pdfproject__c.SSC_Percentage__c}"/></td>
+</tr>
+    
+<tr>
+    <th>Medium Of School</th>
+    <td><apex:outputText value="{!pdfproject__c.Medium_of_school__c}"/></td>
+</tr>
+    
+<tr>
+    <th>School Board</th>
+    <td><apex:outputText value="{!pdfproject__c.School_Board__c}"/></td>
+</tr>
+    
+        
+</table>
+<br/>
+<br/>
+
+<table border="1" cellPadding="4" >
+<tr>
+	<th colspan ="2">Higher Secondary School Information</th>
+</tr>    
+
+<tr>
+    <th>HSC College Name</th>
+    <td><apex:outputText value="{!pdfproject__c.HSC_College_Name__c}"/></td>
+</tr>
+    
+<tr>
+    <th>HSC Passing Year</th>
+    <td><apex:outputText value="{!pdfproject__c.HSC_Passing_Year__c}"/></td>
+</tr>
+    
+<tr>
+    <th>HSC Percentage</th>
+    <td><apex:outputText value="{!pdfproject__c.HSC_Percentage__c}"/></td>
+</tr>
+    
+<tr>
+    <th>HSC Board</th>
+    <td><apex:outputText value="{!pdfproject__c.HSC_Board__c}"/></td>
+</tr>
+    
+</table>
+
+    <table border="1" cellPadding="4" style = "margin-top:180px;">
+    <tr>
+        <th colspan ="2">Graduation Information</th>
+    </tr>    
+
+<tr>
+    <th>Graduation College Name</th>
+    <td><apex:outputText value="{!pdfproject__c.Graduation_College_Name__c}"/></td>
+</tr>
+    
+<tr>
+    <th>Graduation Passing Year</th>
+    <td><apex:outputText value="{!pdfproject__c.Graduation_Passing_Year__c}"/></td>
+</tr>
+    
+<tr>
+    <th>Graduation Percentage</th>
+    <td><apex:outputText value="{!pdfproject__c.Graduation_Percentage__c}"/></td>
+</tr>
+    
+<tr>
+    <th>Graduation Course Done</th>
+    <td><apex:outputText value="{!pdfproject__c.Graduation_Course_Done__c}"/></td>
+</tr>
+ 
+<tr>
+    <th>Graduation University</th>
+    <td><apex:outputText value="{!pdfproject__c.Graduation_University__c}"/></td>
+</tr>
+    
+</table>
+</apex:page>

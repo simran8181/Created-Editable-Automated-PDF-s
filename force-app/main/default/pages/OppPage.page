@@ -1,0 +1,33 @@
+<apex:page Standardcontroller="Opportunity" docType="html-5.0" extensions="opportunityController">
+    <apex:form >
+    <apex:pageBlock title="Opportunity List" id="Opportunity_list">
+    <apex:pageBlockButtons >
+       <apex:commandButton value="Submit Request" action="{!saveAndSuccess}" /> 
+	</apex:pageBlockButtons>        
+    	<!-- Opportunity List -->
+		<apex:pageBlockTable value="{! Opportunity }" var="op">
+    	<apex:column headerValue="Name">
+            <apex:inputText id="Name" value="{!op.Name}" required="true"/>
+		</apex:column>
+        
+        <apex:column headerValue="Stage">
+            <apex:inputField value="{!op.StageName}"/>
+		</apex:column>
+            
+        <apex:column headerValue="Close Date">
+            <apex:inputField value="{!op.CloseDate}"/>
+		</apex:column>
+            
+    	<apex:column headerValue="Amount">
+            <apex:inputText id="Amount" value="{!op.Amount}"/>
+		</apex:column>
+            
+    	<apex:column headerValue="Probability">
+            <apex:inputText id="Probability" value="{!op.Probability}"/>
+		</apex:column>
+	
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+    
+</apex:page>

@@ -1,0 +1,19 @@
+<apex:page standardController="User" extensions="FirstName">
+  
+  <h1>VisualForce Page</h1>
+  <apex:form >
+  
+   <apex:sectionHeader title="User" subtitle="Here is my page">
+   <apex:pageBlock title="User">
+   <apex:pageBlockSection title="User Information" columns="1"> 
+   <apex:inputText id="FirstName" value="{!User.Name}"/>
+   <apex:inputText id="Email" value="{!User.Email}"/>
+   <apex:commandButton value="Edit" action="{!Edit}"/>
+   <apex:commandButton value="Delete" action="{!Delete}"/>
+   
+  
+   </apex:pageBlockSection>
+   </apex:pageBlock>
+   </apex:sectionHeader>
+   </apex:form>
+</apex:page>

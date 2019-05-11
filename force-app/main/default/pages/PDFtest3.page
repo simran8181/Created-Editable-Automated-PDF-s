@@ -1,0 +1,31 @@
+<apex:page showHeader="false" standardStylesheets="false"  
+    standardController="Document_Action__c" recordSetVar="doc" extensions="SaveAsPdfExtension"
+           contentType="{!renderedContentType }" renderAs="{!renderingService }">
+        
+    <apex:form rendered="{!renderingService != 'PDF' }" style="text-align: right; margin: 10px;">
+        <apex:commandLink action="{!saveToPdf }" value="Save to PDF">
+            <apex:param assignTo="{!renderedFileName }" value="Document-List.pdf"/>
+        </apex:commandLink>
+        <hr/>
+    </apex:form>
+     
+    <table border="1" cellPadding="4" > 
+   
+          <TR> 
+              <TH> Name </TH>
+              <TH>PhoneNumber</TH>
+              <TH>Email</TH> 
+    	</TR>
+          <TR>
+              <TD>{!Document_Action__c.Name} </TD>
+              <TD>{!Document_Action__c.Phone_Number__c}</TD>
+              <TD>{!Document_Action__c.Email__c}</TD>                                                                                
+          </TR>
+        
+        </table>
+    <hr/>
+    <!-- A little bit of info about the page's rendering; 
+         see how it changes when saved as a PDF. -->
+    contentType: <apex:outputText value=" {! renderedContentType }"/><br/>
+    renderingService: <apex:outputText value=" {! renderingService }"/><br/>
+</apex:page>

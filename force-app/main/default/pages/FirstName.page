@@ -1,0 +1,38 @@
+<apex:page standardController="User" extensions="FirstName">
+  
+  <h1>VisualForce Page</h1>
+  <style>
+  .bPageBlock
+   {
+     background-color: lightblue !important;
+   }
+   </style>
+
+  <apex:form >
+  
+   <apex:sectionHeader title="User" subtitle="Here is my page">
+   <apex:pageBlock title="User">
+   <apex:pageBlockSection title="User Information" columns="2"> 
+   <apex:inputText id="FirstName" value="{!User.Name}"/>
+   <apex:inputText id="Email" value="{!User.Email}"/>
+   <apex:inputText id="Phone" value="{!User.Phone}"/>
+       <apex:inputText id="LastName" value="{!User.LastName}"/>
+       
+       <apex:inputText id="Alias" value="{!User.Alias}"/>
+       
+       <apex:inputText id="Role" value="{!User.UserRole}"/>
+   </apex:pageBlockSection>
+   <p>Is it true? {!CONTAINS('I am happy','m hap')}</p>
+   
+  
+    <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="cancel"/>
+   </apex:pageBlockButtons>
+   
+   
+   
+   </apex:pageBlock>
+   </apex:sectionHeader>
+   </apex:form>
+</apex:page>
